@@ -65,7 +65,7 @@ ggplot(aes(x=Scenario), data=df) + geom_bar()
 ggplot(aes(x=Silene, y=Total), data=df) + geom_point()
 ggplot(aes(x=Total), data=df) + geom_dotplot(binwidth=2)
 ggplot(aes(x=Nutrients, y=Total), data=df) + geom_dotplot(binaxis="y", binwidth=2)
-df %>% ggplot(aes(x=Nutrients, y=Total), data=df) +
+df %>% ggplot(aes(x=Nutrients, y=Total)) +
         geom_dotplot(binaxis="y", binwidth=2)
 ```
 
@@ -77,5 +77,7 @@ run glimpse(df)
 run df$Scenario <- as.factor(df$Scenario)
 and then run histogram, density, bar, and point.
 last two graphs are different because their x and y of the graph are different
+staging committing and pushing it.
+
 
 
