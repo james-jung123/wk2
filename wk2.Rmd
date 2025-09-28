@@ -1,0 +1,54 @@
+---
+title: "wk2"
+author: "James"
+date: "2025-09-28"
+output: html_document
+---
+```{r message=FALSE, warning=FALSE}
+library(data.table)
+library(tidyverse)
+library(ggplot2)
+
+10 + 2 # add
+10 - 2 # subtract
+10 * 2 # multiply
+10 / 2 # divide
+10 ^ 2 # exponent
+10 %% 2 # modulo
+13 %% 2 # modulo
+```
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+$a+b= c$
+
+$\text{a}+b$
+
+a$a$
+
+a$$a$$
+
+# R BASIC
+
+## ADD
+
+a+b=c
+```{r}
+10+2
+```
+## subtract
+
+a-b=c
+```{r}
+10-2
+```
+
+##multiply
+
+a*b=c
+```{r}
+10*2
+```
+
