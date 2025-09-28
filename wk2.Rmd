@@ -3,6 +3,8 @@ title: "wk2"
 author: "James"
 date: "2025-09-28"
 output: html_document
+editor_options: 
+  chunk_output_type: console
 ---
 ```{r message=FALSE, warning=FALSE}
 library(data.table)
@@ -45,10 +47,35 @@ a-b=c
 10-2
 ```
 
-##multiply
+## multiply
 
 a*b=c
 ```{r}
 10*2
 ```
+
+```{r}
+df<-fread("https://colauttilab.github.io/RCrashCourse/FallopiaData.csv")
+head(df)
+glimpse(df)
+df$Scenario <- as.factor(df$Scenario)
+ggplot(aes(x=Total), data=df) + geom_histogram()
+ggplot(aes(x=Total), data=df) + geom_density()
+ggplot(aes(x=Scenario), data=df) + geom_bar()
+ggplot(aes(x=Silene, y=Total), data=df) + geom_point()
+ggplot(aes(x=Total), data=df) + geom_dotplot(binwidth=2)
+ggplot(aes(x=Nutrients, y=Total), data=df) + geom_dotplot(binaxis="y", binwidth=2)
+df %>% ggplot(aes(x=Nutrients, y=Total), data=df) +
+        geom_dotplot(binaxis="y", binwidth=2)
+```
+
+download tidyverse, ggplot2, and data.table
+do library and put 3 of them and run
+and try add, subtract, multiply, divide, and mudulo and run it
+write df<-fread and type the url
+run glimpse(df)
+run df$Scenario <- as.factor(df$Scenario)
+and then run histogram, density, bar, and point.
+last two graphs are different because their x and y of the graph are different
+
 
